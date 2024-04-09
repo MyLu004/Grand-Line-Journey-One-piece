@@ -1,0 +1,63 @@
+:root{
+    --red:#C24B31;
+    --yellow:#E4C963;
+    --orange:#E2A05D;
+    --light-blue:#C4D3E5;
+    --mid-blue:#7892CD;
+    --green:#A5BB8B;
+    --light-gray:#D9D9D9;
+    --white:#EEEFE9;
+
+}
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*START SECTION 1: HEADING*/
+.header{
+    background-color: var(--orange);
+}
+
+
+/*END SECTION 1: HEADING*/
+
+
+/*START SECTION 2: Crew Member*/
+.crew-member{
+    background-color: var(--red);
+}
+/*END SECTION 2: Crew Member*/
+
+
+/*START SECTION 3: Song Playlist*/
+.playlist{
+    background-color: var(--green);
+}
+/*END SECTION 3: Song Playlist*/
