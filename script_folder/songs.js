@@ -3,11 +3,6 @@
 
 
 const songs = [
-    // {
-    //     title: "New Horizons Main Theme",
-    //     src : "001 - New Horizons Main Theme.mp3"
-    // },
-
     {
         title: "WE ARE",
         src : "./script_folder/song_data_folder/we-are-hiroshi-kitadani.mp3"
