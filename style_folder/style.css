@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 :root{
     --red:#C24B31;
     --yellow:#E4C963;
@@ -20,7 +23,7 @@
 
 html{
     font-size: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -101,6 +104,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
     /* background-color: var(--red); */
     width: 40vw;
     height: 7vh;
@@ -127,6 +132,7 @@ a{
 
 .grid-item:hover{
     scale: 1.1;
+    color: var(--white);
 }
 
 /*END SECTION 1: HEADING*/
@@ -149,7 +155,7 @@ a{
 .crew-grid{
     display: grid;
     grid-template-columns: auto ;
-    gap:3rem 2rem;
+    gap:10rem 2rem;
 }
 
 .crew-item{
@@ -157,7 +163,8 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--mid-blue);
+    gap:15px;
+    /* background-color: var(--mid-blue); */
     width: min(500px,60vw);
     height: 35vh;
     border-radius: 2rem;
@@ -165,9 +172,13 @@ a{
 }
 
 .crew-item img{
-    width: min(500px,60vw);
+    width: min(500px,50vw);
     height: 35vh;
     border-radius: 2rem;
+}
+
+.crew-item h3{
+    font-size: 20px;
 }
 
 .crew-item:hover{
@@ -197,7 +208,7 @@ a{
     height: 45vh;
     border-radius: 2.5rem;
     padding:25px 25px 10px;
-    background-color: var(--green);
+    background-color: var(--red);
 }
 
 .music-container-inner{
@@ -248,7 +259,8 @@ a{
     width: 100%;
     height: 90%;
     flex-grow: 1;
-    /* background-color: yellow; */
+    /* background-color: var(--yellow); */
+    border-radius: 2rem;
     padding: 10px 5px;
     overflow: auto;
     scroll-behavior: smooth;
@@ -277,7 +289,7 @@ a{
 }
 
 .list tr.active{
-    background-color: var(--green);
+    background-color: var(--mid-blue);
     cursor: pointer;
 }
 
@@ -355,7 +367,7 @@ a{
     width: 400px;
     height:10px;
     appearance: none;
-    background: var(--red);
+    background: var(--yellow);
     outline: none;
     border-radius: 5px; 
 }
