@@ -5,6 +5,7 @@
     --light-blue:#C4D3E5;
     --mid-blue:#7892CD;
     --green:#A5BB8B;
+    --skin: #EBD0A9;
     --light-gray:#D9D9D9;
     --white:#EEEFE9;
 
@@ -23,13 +24,13 @@ html{
     scroll-behavior: smooth;
 }
 
-.title{
+.section-title{
     font-size: 4rem;
     margin: 2rem;
 }
 
 a{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -41,7 +42,15 @@ a{
     align-items: center;
     justify-content: center;
     padding: 5rem;
+    gap:2em;
 }
+
+/* img{
+    width:70vw;
+    height: 50vh;
+    border-radius: 2rem;
+} */
+
 
 /* .img{
     width:100%;
@@ -58,10 +67,11 @@ a{
 
 /*START SECTION 1: HEADING*/
 .header{
-    background-color: var(--orange);
+    background-color: var(--skin);
 }
 
 .wrapper{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,28 +80,53 @@ a{
 
 
 .img-container{
-    width: 100px;
-    height: 10px;
-    background-color: red;
+    display: block;
+    /* width: 100px;
+    height: 10px; */
+    /* background-color: pink; */
+    position: relative;
     margin: 1.4em;
 }
+
+
 
 .gird-container{
     display: inline-grid;
     font-size: 1.5em;
     grid-template-columns: auto auto;
-    gap: 1em 1em;
+    gap: 2em 1em;
 }
 
 .grid-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--red);
-    width: 25vw;
+    /* background-color: var(--red); */
+    width: 40vw;
     height: 7vh;
     border-radius: 5em;
     text-align: center;  
+    cursor: pointer;
+}
+
+.grid-item.item1{
+    background-color: var(--red);
+}
+
+.grid-item.item2{
+    background-color: var(--green);
+}
+
+.grid-item.item3{
+    background-color: var(--yellow);
+}
+
+.grid-item.item4{
+    background-color: var(--orange);
+}
+
+.grid-item:hover{
+    scale: 1.1;
 }
 
 /*END SECTION 1: HEADING*/
@@ -99,43 +134,296 @@ a{
 
 /*START SECTION 2: Crew Member*/
 .crew-member{
-    background-color: var(--red);
+    background-color: var(--green);
+    /* padding: 2em; */
 }
 
 .crew-container{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5em 3em;
 }
 
 .crew-grid{
     display: grid;
     grid-template-columns: auto ;
-    gap:2rem;
+    gap:3rem 2rem;
 }
 
 .crew-item{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     background-color: var(--mid-blue);
-    width: 60vw;
+    width: min(500px,60vw);
+    height: 35vh;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.crew-item img{
+    width: min(500px,60vw);
     height: 35vh;
     border-radius: 2rem;
 }
+
+.crew-item:hover{
+    scale: 1.02;
+}
+
+
+/*display crew img*/
+
+
+
 /*END SECTION 2: Crew Member*/
 
 
 /*START SECTION 3: Song Playlist*/
-.playlist{
+.myplaylist{
+    background-color: var(--mid-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 5em; */
+}
+
+/*MUSIC SETTING*/
+.music-setting-container{
+    width: min(800px,100vw);
+    height: 45vh;
+    border-radius: 2.5rem;
+    padding:25px 25px 10px;
     background-color: var(--green);
 }
+
+.music-container-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+
+    width: 100%;
+    height: 83%;
+    border-radius: 1.5em;
+    background-color: var(--red);
+    padding: 10px 25px 15px;
+}
+
+.music-wrapper{
+    width: 100%;
+    height: inherit;
+    /* border-radius: 2em; */
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 7px 0;
+    font-size: 20px;
+    gap:20px;
+}
+
+
+
+.music-cover-image{
+    width: 100%;
+    height: 100%;
+    background: url('/Img_folder/OnePiece.jpg');
+    background-size: cover;
+    background-position: center;
+    transform-origin: 0% 0%;
+    border-radius: 1em ;
+    overflow: hidden;
+
+    /* background-color: red; */
+}
+
+.music-list-wrapper{
+    /* font-size: 20px; */
+    width: 100%;
+    height: 90%;
+    flex-grow: 1;
+    /* background-color: yellow; */
+    padding: 10px 5px;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+
+
+.list{
+    width: 100%;
+    border-spacing: 0px 2px ;
+    /* background-color: aqua; */
+    border-radius: 2em;
+}
+
+
+.list tr{
+    height: 35px;
+    text-align: center;
+    /* background-color: red; */
+    text-indent: 10px;
+}
+
+.list tr:hover{
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.list tr.active{
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.list .songName{
+    color: var(--white);
+    font-family: 'Lato',sans-serif;
+    /* font-weight: 400; */
+    /* width: 220px; */
+    text-align: left;
+    text-indent: 0;
+    transition: all 0.3s;
+}
+
+.title{
+    font-size: 25px;
+    text-align: left;
+}
+
+
+/*MUSIC CONTROLER*/
+.music-control{
+    width: 40%;
+    height: 40%;
+    border-radius: 2em;
+    background-color: var(--yellow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap:20px;
+    color:black;
+    
+}
+
+.music-control #playpause{
+    /* background-color: black; */
+    font-size: 30px;
+}
+
+.fas{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.fas:hover{
+    color: var(--white);
+}
+
+/*MUSIC: VOLUME ADJUSTMENT*/
+.music-volume{
+    width: 100%;
+    height:50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+#VolumeIcon{
+    color: black;
+    font-size: 25px;
+}
+
+.music-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    
+}
+
+#volumeSlider{
+    width: 400px;
+    height:10px;
+    appearance: none;
+    background: var(--red);
+    outline: none;
+    border-radius: 5px; 
+}
+
+#volumeSlider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black; /* Set the desired color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.music-slider-value{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    /* background-color: red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /*END SECTION 3: Song Playlist*/
 
-@media only screen and (min-width: 750px){
+
+@media only screen and (min-width: 700px){
+    .crew-grid{
+        grid-template-columns: auto auto;
+    }
+
+    .music-wrapper{
+        width: 100%;
+        height: inherit;
+        /* border-radius: 2em; */
+        /* background-color: lightblue; */
+        flex-direction: row;
+        font-size: 20px;
+        gap:2em;
+    }
+
+    .music-control{
+        width: 50%;
+        height: 50%;  
+    }
+
+}
+
+@media only screen and (min-width: 1240px){
+    .section-title{
+        font-size: 7rem;
+    }
+
+    .title{
+        font-size: 30px;
+        text-align: left;
+        /* color: red; */
+    }
+
+    .songName{
+        color: red;
+    }
+
+
+    
     .container{
         padding: 2rem;
     }
@@ -163,13 +451,13 @@ a{
     }
 
     .crew-item{
-        width: 25vw;
-        height: 50vh;   
+        width: 20vw;
+        height: 40vh;   
     }
 
-
-
-    
-
-
+    .crew-item img{
+        width: 20vw;
+        height: 40vh; 
+    }
 }
+

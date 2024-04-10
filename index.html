@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style_folder/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
     <title>Grand Line Journey</title>
 </head>
 <body>
@@ -11,16 +12,16 @@
 <!--HEADER START-->
     <section id="header">
         <div class="header container">
-            <h1 class="title">Grand Line Journey | One piece</h1>
+            <h1 class="section-title">Grand Line Journey | One piece</h1>
             <div class="wrapper">
                 <div class="img-wrapper">
                     <img class="img-container" src="./Img_folder/OnePieceMain.png" alt="">
                 </div>  
                 <div class="gird-container">
-                    <div class="grid-item">Wiki</div>
-                    <div class="grid-item">Anime</div>
-                    <div class="grid-item">Manga</div>
-                    <div class="grid-item">Discord</div>
+                    <a href="https://onepiece.fandom.com/wiki/One_Piece_Wiki" class="grid-item item1" target="_blank">Wikipedia</a>
+                    <a href="https://9animetv.to/watch/one-piece-100?ep=120115" class="grid-item item2" target="_blank">Watch Anime</a>
+                    <a href="" class="grid-item item3" target="_blank">Read Manga</a>
+                    <a href="" class="grid-item item4" target="_blank">Join Discord</a>
 
                 </div>
             </div>
@@ -31,24 +32,28 @@
 
     <section id="crew-member">
         <div class="crew-member container">
-            <h1 class="title">Crew Member</h1>
+            <h1 class="section-title">Crew Member</h1>
     
             <div class="crew-container">
                 <div class="crew-grid">
-                    <div class="crew-item">
-                        Name1
+                    <div class="crew-item crew1">
+                        <img src="./Img_folder/crew_img/Luffy.png" alt="">
                     </div>
-                    <div class="crew-item">
-                        Name2
+                    
+                    <div class="crew-item crew2">
+                        <img src="./Img_folder/crew_img/Zoro.png" alt="">
                     </div>
-                    <div class="crew-item">
-                        Name3
+                    
+                    <div class="crew-item crew3">
+                        <img src="./Img_folder/crew_img/Sanji.png" alt="">
                     </div>
-                    <div class="crew-item">
-                        Name4
+                    
+                    <div class="crew-item crew4">
+                        <img src="./Img_folder/crew_img/Nami.png" alt="">
                     </div>
-                    <div class="crew-item">
-                        Name5
+                    
+                    <div class="crew-item crew5">
+                        <img src="./Img_folder/crew_img/Ussop.png" alt="">
                     </div>
                 </div>
             </div>
@@ -59,11 +64,62 @@
 
     </section>
 
-    <section id ="playlist">
-        <div class="playlist container">
-            <h1 class="title">Sunny Symphony</h1>
+    <section id ="myplaylist">
+        <div class="myplaylist container">
+            <h1 class="section-title">Sunny Symphony</h1>
+
+            <div class="music-setting-container">
+                <div class="music-container-inner">
+                    <div class="music-wrapper">
+                        <div class="music-cover-image"></div>
+                        <div class="music-list-wrapper">
+                            <table class="list" id="playlist">
+
+                                <!--SONG start-->
+                                <tr class="song">
+                                    <td class="no">
+                                        <h5>1</h5>
+                                    </td>
+                                    <td class="songName">
+                                        <p>Song</p>
+                                    </td>
+                                </tr>
+                                <!--SONG end-->
+
+                                
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="music-control">
+                        <i class="fas fa-backward" id="prev"></i>
+                        <i class="fas fa-play" id="playpause"></i>
+                        <i class="fas fa-forward" id="next"></i>
+                    </div>
+                    <!-- <div class="music-player-body"></div> -->
+                </div>
+                
+                <div class="music-volume">
+                    <div class="music-slider">
+
+                        <div class="icon-volume">
+                            <i class="fa-solid fa-volume-high" id="VolumeIcon"></i>
+                            <!-- <i class="fa-solid fa-volume-low" ></i>
+                            <i class="fa-solid fa-volume-xmark"></i> -->
+                        </div>
+                        <input type="range" id="volumeSlider" min="0" max="100" value="100">
+                        <div class="music-slider-value">100</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        </div>
     </section>
+
+    <!--SCRIPTS-->
+    <script type ="module" src = "script_folder/playlist_function.js"></script>
+    <script src = "script_folder/song.js"></script>
+
 </body>
 </html>
